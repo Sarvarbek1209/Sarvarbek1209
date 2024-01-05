@@ -1,0 +1,101 @@
+class UsingCheckedExceptionDemo{
+// static void Alpha(int n)throws Exception{
+//  String txt="Метод Alpha() с аргументом"+n;
+//  throw new Exception(txt);
+// }
+// static void Bravo(int n){
+//  String txt="Метод Bravo() с аргументом"+n;
+//try {
+// if (n>0){
+//  throw new Exception(txt);
+// }
+// else {
+//  throw new RuntimeException(txt);
+// }
+//}
+//catch (RuntimeException e){
+// throw e;
+//}
+//catch (Exception e){
+// System.out.println("Обработка ошибки Bravo():");
+// System.out.println(e.getMessage());
+// System.out.println("*************************");
+//}
+// }
+// static void catchMe(Exception e){
+//  System.out.println("Обработка ошибки main():");
+//  System.out.println(e.getMessage());
+//  System.out.println("-------------------------");
+// }
+// public static void main(String[]args){
+//try {
+// Alpha(123);
+//}
+//catch (Exception e){
+//catchMe(e);
+//}
+//try {
+// Bravo(123);
+//}
+//catch (Exception e){
+// catchMe(e);
+//}
+//try {
+// Bravo(-1);
+//}
+//catch (Exception e){
+// catchMe(e);
+//}
+//}
+//}
+//class MyException extends Exception{
+// private int code;
+// MyException(int n){
+//  super();
+//  code=n;
+// }
+// public String toString(){
+//  String txt= "Исключение класса MyException\n";
+//  txt+="Код ошибки: "+code+"\n";
+//  txt+="-------------------------";
+//  return txt;
+// }
+//}
+//class MyMistek extends RuntimeException {
+// private int code;
+//
+// MyMistek(int n) {
+//  super();
+//  code = n;
+// }
+//
+// public String toString() {
+//  String txt = "Исключение класса MyMistek\n";
+//  txt += "Код ошибки: " + code + "\n";
+//  txt += "***************************";
+//  return txt;
+// }
+//}
+//class Sarvar{
+// static void alpha(int n) throws MyException{
+//  throw new MyException(n);
+// }
+// static void bravo(int n){
+//  throw new MyMistek(n);
+// }
+// public static void main(String[]args){
+//try {
+// try {
+//  alpha(500);
+// }
+// catch (MyException e){
+//  System.out.println(e);
+//  bravo(321);
+// }
+//}
+//catch (MyMistek e){
+// System.out.println(e);
+//
+//}
+// }
+//}
